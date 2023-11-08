@@ -16,7 +16,6 @@ df = pd.read_csv(path_source, sep ='|')
 # Initialize a Spark session
 spark = SparkSession.builder.appName("PandasToDatabricks").getOrCreate()
 
-# Assuming 'df' is your Pandas DataFrame
 # Convert the Pandas DataFrame to a PySpark DataFrame
 spark_df = spark.createDataFrame(df)
 
